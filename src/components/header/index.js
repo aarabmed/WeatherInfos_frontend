@@ -5,7 +5,7 @@ function Header() {
     <div className="App-header">
       <div className="Banner">
         <a href="https://weatherinfos.herokuapp.com">
-          <img src="/assets/images/logo.png" alt="weather info - Logo" />
+          <img src="assets/images/logo.png" alt="weather info - Logo" />
         </a>
         <div className="Title">
           <h1>Weather Infos</h1>

@@ -89,9 +89,6 @@ module.exports = (env) => {
         
         devtool: 'inline-source-map',
         devServer: {
-            static: {
-                directory: path.join(__dirname, 'public'),
-                },
             port: 9000,
             compress: true,
             historyApiFallback: true,

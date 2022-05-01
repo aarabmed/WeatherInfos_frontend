@@ -1,11 +1,16 @@
 import React from 'react';
 import { ApolloClient,ApolloProvider,InMemoryCache,HttpLink } from '@apollo/client';
-
+import ReactGA from 'react-ga';
+  
 import ReactDOM from 'react-dom';
 import App from './components/layout/App';
 import reportWebVitals from './reportWebVitals';
 
 import "./styles/styles.scss"
+
+
+const TRACKING_ID = process.env.TRACKID; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 const apolloClient = new ApolloClient({
   link: new HttpLink({
