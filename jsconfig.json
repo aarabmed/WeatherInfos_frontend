@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "paths": {
+          "src/*": ["./*"],
+          "base/*": ["./*"]
+      },
+      "baseUrl": "src",
+      "module": "es6",
+      "target": "es2019",
+      "jsx": "react",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "es2017.intl",
+        "es2018.intl" 
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": false,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true
+    },
+    "exclude": [
+      "node_modules"
+    ]
+}

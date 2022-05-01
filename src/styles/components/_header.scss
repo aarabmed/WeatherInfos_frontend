@@ -1,0 +1,37 @@
+.App-header {
+    .Banner{
+        display: flex;
+        flex-flow: row;
+        background: linear-gradient(90deg, #2c287300 0%, #5f33f7 0%, #673cdd 100%);
+        align-items: center;
+        justify-content: left; 
+        height: 200px;
+        
+        img{
+            width: 60%;
+            margin: 5px auto;
+            display: block;
+        }
+
+        a{
+            width: 220px;
+            margin: 10px;
+        }
+
+        .Title{
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            color :white;
+            
+            margin:0 20px;
+            h1{
+                margin:5px ;
+            }
+            h3{
+                margin: 5px;
+                font-weight: 300;
+            }
+        }
+    }
+}
