@@ -10,7 +10,7 @@ import "./styles/styles.scss"
 
 
 const setGA = () => {
-  ReactGA.initialize(TRACKID);
+  ReactGA.initialize(process.env.TRACKID);
   ReactGA.pageview('Init page view');
 };
 
