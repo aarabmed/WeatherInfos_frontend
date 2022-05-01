@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ApolloClient,ApolloProvider,InMemoryCache,HttpLink } from '@apollo/client';
 import ReactGA from 'react-ga';
   
@@ -9,8 +9,10 @@ import reportWebVitals from './reportWebVitals';
 import "./styles/styles.scss"
 
 
-const TRACKING_ID = process.env.TRACKID; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
+const setGA = () => {
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.pageview('Init page view');
+};
 
 const apolloClient = new ApolloClient({
   link: new HttpLink({
@@ -20,7 +22,9 @@ const apolloClient = new ApolloClient({
 });
 
 const AppWrapper = ()=>{
-  
+  useEffect(()=>{
+    setGA()
+  },[])
   return (
     <ApolloProvider client={apolloClient}>
       <App/>
