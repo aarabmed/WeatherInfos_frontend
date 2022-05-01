@@ -5,7 +5,6 @@ import Spinner from '../spinner';
 import {useQuery} from "@apollo/client"
 import { GET_CITY, GET_CITY_WEATHER } from "graphql/query/weather"
 import { CelsiusIcon,FarenHeitIcon,PressureIcon,HumidityIcon,WindSpeedIcon,WindDirectionIcon} from '../icons';
-import ReactGA from 'react-ga';
 
 function Body() {
   const [location, setLocation] = useState('');
@@ -42,7 +41,6 @@ function Body() {
   }
 
   useEffect(()=>{
-    ReactGA.pageview(window.location.pathname);
     if(cities){
       const sanitizeOptions=cities.city.map((option)=>({value:option.cityName,label:<>
                 {option.cityName} - <span style={{color:'gray', fontSize:'12',fontWeight:"bold"}}>{option.country.countryName} {`(${option.country.native_name})`}  </span>
