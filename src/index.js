@@ -9,10 +9,6 @@ import reportWebVitals from './reportWebVitals';
 import "./styles/styles.scss"
 
 
-const setGA = () => {
-  ReactGA.initialize(process.env.TRACKID);
-  ReactGA.pageview('Init page view');
-};
 
 const apolloClient = new ApolloClient({
   link: new HttpLink({
@@ -22,9 +18,6 @@ const apolloClient = new ApolloClient({
 });
 
 const AppWrapper = ()=>{
-  useEffect(()=>{
-    setGA()
-  },[])
   return (
     <ApolloProvider client={apolloClient}>
       <App/>
