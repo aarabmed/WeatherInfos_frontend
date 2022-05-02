@@ -16,7 +16,7 @@ const setGA = () => {
 
 const apolloClient = new ApolloClient({
   link: new HttpLink({
-    uri: `${process.env.PUBLIC_GRAPHQL_API_ENDPOINT}`,
+    uri:`${process.env.REACT_APP_PUBLIC_GRAPHQL_API_ENDPOINT}`,
   }),
   cache: new InMemoryCache(),
 });

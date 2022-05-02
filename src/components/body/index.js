@@ -46,6 +46,7 @@ function Body() {
 
   useEffect(()=>{
     if(cities){
+      console.log('cities:',cities)
       const sanitizeOptions=cities.city.map((option)=>({value:option.cityName,label:<>
                 {option.cityName} - <span style={{color:'gray', fontSize:'12',fontWeight:"bold"}}>{option.country.countryName} {`(${option.country.native_name})`}  </span>
                 <span><img src={option.country.flag} alt={option.country.countryName} style={{height:'12px'}}/></span>
