@@ -21,7 +21,7 @@ function Body() {
     }
   );
 
-  const { data:cities, loading:loadingCity } = useQuery(
+  const { data:cities,error:citiesError, loading:loadingCity } = useQuery(
     GET_CITY,{
       variables: {
         city: location,
@@ -31,9 +31,13 @@ function Body() {
 
   
   if(error){
-
+      console.log('Errror:',error)
   }
 
+  if(citiesError){
+    console.log('citiesError:',citiesError)
+
+  }
   
   const getDay=(epoch)=>{
     const day = moment.unix(epoch).format('dddd')
