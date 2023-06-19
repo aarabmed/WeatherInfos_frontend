@@ -57,6 +57,7 @@ function Body() {
 
 
   const onChangeLocation = (value) => {
+    console.log('value:',value)
     if(value.length>2){
       console.log('value:',value)
       setLocation(value)
