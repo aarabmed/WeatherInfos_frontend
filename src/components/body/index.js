@@ -13,7 +13,7 @@ function Body() {
   const [options, setOptions] = useState([]);
 
 
-  const { data, error, loading } = useQuery(
+  const { data, loading } = useQuery(
     GET_CITY_WEATHER,{
       variables: {
         city: seletedlocation,
@@ -21,7 +21,7 @@ function Body() {
     }
   );
 
-  const { data:cities,error:citiesError, loading:loadingCity } = useQuery(
+  const { data:cities, loading:loadingCity } = useQuery(
     GET_CITY,{
       variables: {
         city: location,
@@ -30,14 +30,8 @@ function Body() {
   );
 
   
-  if(error){
-      console.log('Errror:',error)
-  }
 
-  if(citiesError){
-    console.log('citiesError:',citiesError)
 
-  }
   
   const getDay=(epoch)=>{
     const day = moment.unix(epoch).format('dddd')
