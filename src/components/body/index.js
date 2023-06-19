@@ -57,7 +57,10 @@ function Body() {
 
 
   const onChangeLocation = (value) => {
-    value.length>2&&setLocation(value)
+    if(value.length>2){
+      console.log('value:',value)
+      setLocation(value)
+    }
   };
 
   const onSelectOption = ({value})=>{
