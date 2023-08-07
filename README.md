@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Working url for this app :
 
-[Weather-Infos](http://weather-infos.herokuapp.com/).
+[Weather-Infos](https://whether-jsyk.onrender.com).
 
 
 
